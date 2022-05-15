@@ -67,7 +67,7 @@ function getRandomQuote() {
 function printQuote() {
     let randomQuote = getRandomQuote();
 
-    let PtoHTML1 = "<p class='source'>" + randomQuote.quote + "<p class='source'>" + 
+    let PtoHTML1 = "<p class='quote'>" + randomQuote.quote + "<p class='source'>" + 
 randomQuote.source;
 
     // checking if citation property exists
