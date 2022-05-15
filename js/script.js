@@ -35,14 +35,14 @@ quotes[4].source="Ferris Bueller";
 quotes[4].citation="Ferris Bueller's Day Off";
 quotes[4].year="1986";
 
-
+console.log(quotes);
 
 /***
  * `getRandomQuote` function
 ***/
 function getRandomQuote() {
     let quotesLength = quotes.length;
-    // getting random number
+    // getting random number from 0 to quotesLength
     let randomNum = Math.floor(Math.random() * quotesLength);
     // getting random quote
     randomQuote = quotes[randomNum];
@@ -57,11 +57,6 @@ function getRandomQuote() {
 ***/
 function printQuote() {
     let randomQuote = getRandomQuote();
-
-    // let quote = randomQuote.quote;
-    // let source = randomQuote.source;
-    // let citation = randomQuote.citation;
-    // let year = randomQuote.year;
 
     let PtoHTML1 = "<p class='source'>" + randomQuote.quote + "<p class='source'>" + 
 randomQuote.source;
