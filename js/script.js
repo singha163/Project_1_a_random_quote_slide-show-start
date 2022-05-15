@@ -11,7 +11,7 @@ quotes[2]={};
 quotes[3]={};
 quotes[4]={};
 
-
+let randomQuoteNum=-1;
 
 quotes[0].quote="A wise man can learn more from his enemies than a fool from his friends.";
 quotes[0].source="Niki Lauda";
@@ -43,9 +43,18 @@ console.log(quotes);
 function getRandomQuote() {
     let quotesLength = quotes.length;
     // getting random number from 0 to quotesLength
-    let randomNum = Math.floor(Math.random() * quotesLength);
+    let randomNum;
+
+    // ensuring new quote every time
+    do {
+        randomNum = Math.floor(Math.random() * quotesLength);        
+    } while (randomQuoteNum === randomNum);
+
+    // storing random number generated for future reference
+    randomQuoteNum = randomNum;
+   
     // getting random quote
-    randomQuote = quotes[randomNum];
+    randomQuote = quotes[randomQuoteNum];
 
     return randomQuote;
 }
